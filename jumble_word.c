@@ -41,7 +41,8 @@ load_file (char *wordlist)
   char word[MAX_LENGTH];
   long int current_file_position, last_file_position;
   int loading_step_size;
-  jumble_tree_t *current_node, *head;
+  jumble_tree_t *head; 
+  // jumble_tree_t *current_node;
 
   /* Store start time for runtime stats */
   printf ("\n[Loading] <%s>...\n", wordlist);
@@ -77,7 +78,7 @@ load_file (char *wordlist)
    * read words and load them into the tree         */
   while (!feof (fp))
     {
-      current_node = head;
+//      current_node = head;
       current_file_position = ftell (fp);
       fscanf (fp, " %s", word);
 
